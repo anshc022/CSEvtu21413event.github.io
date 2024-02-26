@@ -1,0 +1,88 @@
+.container {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#event-image {
+    margin-bottom: 20px;
+}
+
+#event-image img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#event-details {
+    margin-bottom: 30px;
+}
+
+#event-title {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#event-date {
+    color: #666;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#event-rules ul {
+    list-style-type: disc;
+    margin-left: 25px;
+}
+
+.button-area {
+    margin-bottom: 20px;
+}
+
+#register-button,
+#join-whatsapp-group button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#register-button:hover,
+#join-whatsapp-group button:hover {
+    background-color: #0056b3;
+}
+
+#join-whatsapp-group {
+    display: inline-block;
+}
+
+#join-whatsapp-group img {
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+}
+
+#join-whatsapp-group span {
+    vertical-align: middle;
+}
