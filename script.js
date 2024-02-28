@@ -26,6 +26,29 @@ registerButtons.forEach(button => {
         //     button.removeChild(loader);
     });
 });
+// Find all buttons with the class 'register-btn'
+const registerButtons = document.querySelectorAll('.register-btn');
+
+// Loop through each button and add an event listener
+registerButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const eventId = button.dataset.eventId;
+
+        // 1. Loading Indicator
+        button.disabled = true;
+        button.textContent = ''; // Clear the text
+
+        // Create a loading spinner element 
+        const loader = document.createElement('div');
+        loader.classList.add('loader'); // Add a CSS class for styling
+        button.appendChild(loader);
+
+        // 2. Redirect with Transition 
+        window.setTimeout(() => {
+            window.location.href = `ev2.html?eventId=${eventId}`; // Redirect to ev2.html
+        }, 500);
+    });
+});
 
 // Script to handle event date display and registration button
 const eventDateElement = document.getElementById('event-date');
