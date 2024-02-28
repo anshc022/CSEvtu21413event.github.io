@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="logo">
             <img src="Logo-337x109.png" alt="Your Logo">
@@ -45,6 +44,7 @@
         <div class="container">
             <h2>Upcoming Events</h2>
 
+
             <div class="events-grid">
 
                 <div class="event-card">
@@ -52,7 +52,7 @@
                     <h3>StartUp Pitching</h3>
                     <p class="date">Feb 29th, 2024</p>
                     <p>Put your skills to Get ready to discover your inner entrepreneur</p>
-                    <button class="register-btn" onclick="checkEventStatus()">View details</button>
+                    <button class="register-btn" onclick="checkEventStatus()">Closed</button>
                 </div>
 
                 <script>
@@ -77,7 +77,7 @@
                     <h3>Solution Sprint-24</h3>
                     <p class="date">Mar 19th, 2024</p>
                     <p>Put your skills to Get ready to discover your inner entrepreneur</p>
-                    <button class="register-btn" onclick="showRegistrationMessage()" data-event-id="1">Registration</button>
+                    <button class="register-btn" onclick="showRegistrationMessage()" data-event-id="1">Open Soon</button>
                     <script>
                         function showRegistrationMessage() {
                             var registrationStartDate = new Date("2024-03-14T17:00:00"); // Registration start date and time: Mar 14th, 2024 at 5:00 PM
@@ -105,6 +105,13 @@
                 </div>
                 <!-- Add more event cards as needed -->
             </div>
+            <section id="event-results">
+                <div class="container">
+                    <h2>Event Results</h2>
+                    <p>The results for the event will be displayed here.</p>
+                </div>
+            </section>
+
         </div>
     </section>
 
