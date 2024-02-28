@@ -29,6 +29,7 @@
         }
         
         input[type="text"],
+        input[type="email"],
         select {
             width: 100%;
             padding: 10px;
@@ -36,6 +37,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
+            font-size: 16px;
         }
         
         button[type="submit"] {
@@ -58,6 +60,17 @@
             color: red;
             font-size: 14px;
             margin-top: -10px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            form {
+                padding: 20px;
+            }
+            input[type="text"],
+            input[type="email"],
+            select {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -119,10 +132,25 @@
         const submitButton = document.getElementById('submit-btn');
 
         form.addEventListener('submit', function(event) {
-                    const emailInput = document.getElementById('email');
-                    const emailValue = emailInput.value.trim();
+            const emailInput = document.getElementById('email');
+            const emailValue = emailInput.value.trim();
 
-                    if (!validateEmail(emailValue)) {
-                        event.preventDefault(); // Prevent form submission
-                        showError(emailInput, 'Please enter a valid email address.');
-                    }
+            if (!validateEmail(emailValue)) {
+                event.preventDefault(); // Prevent form submission
+                showError(emailInput, 'Please enter a valid email address.');
+            }
+        });
+
+        function showError(input, message) {
+            const errorDiv = input.nextElementSibling;
+            errorDiv.innerText = message;
+        }
+
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
+</body>
+
+</html>

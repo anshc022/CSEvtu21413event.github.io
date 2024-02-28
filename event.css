@@ -1,7 +1,10 @@
+/* CSS for event details */
+
 .container {
     position: relative;
     font-family: 'Arial', sans-serif;
-    max-width: 800px;
+    max-width: 95%;
+    /* Adjusted max-width for better mobile responsiveness */
     margin: 0 auto;
     padding: 30px;
     border-radius: 8px;
@@ -9,33 +12,32 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#event-image {
-    margin-bottom: 20px;
-}
-
 #event-image img {
     width: 100%;
-    max-height: 350px;
+    max-height: 250px;
+    /* Reduced max-height for better mobile display */
     border-radius: 5px;
     object-fit: cover;
 }
 
-#event-details {
-    margin-bottom: 30px;
-}
-
 #event-title {
-    font-size: 2.2em;
+    font-size: 1.8em;
+    /* Adjusted font size for smaller screens */
     margin-bottom: 10px;
     color: #333;
+    text-align: center;
+    /* Centered text for better mobile display */
 }
 
 #event-date {
     color: #666;
+    text-align: center;
+    /* Centered text for better mobile display */
 }
 
 h2 {
-    font-size: 1.6em;
+    font-size: 1.4em;
+    /* Adjusted font size for smaller screens */
     margin-bottom: 15px;
 }
 
@@ -51,6 +53,8 @@ p {
 
 .button-area {
     margin-bottom: 20px;
+    text-align: center;
+    /* Centered button for better mobile display */
 }
 
 .button-area a {
@@ -61,7 +65,8 @@ p {
 .button-area button {
     background-color: #007bff;
     color: white;
-    padding: 15px 30px;
+    padding: 12px 24px;
+    /* Adjusted padding for smaller screens */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -73,29 +78,13 @@ p {
     background-color: #0056b3;
 }
 
-.join-button {
-    display: inline-block;
-    background-color: #3ecf3e;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.join-button:hover {
-    background-color: #113714;
-}
-
 #join-whatsapp-group {
     display: flex;
-    justify-content: flex-end;
-    /* Align to the right */
+    justify-content: center;
+    /* Centered button for better mobile display */
     align-items: center;
     /* Vertically centered */
     margin-top: 20px;
-    margin-left: 20px;
-    /* Adjust the margin for spacing */
 }
 
 #join-whatsapp-group a {
@@ -103,13 +92,8 @@ p {
 }
 
 #join-whatsapp-group img {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-}
-
-#join-whatsapp-group img {
-    width: 30px;
+    width: 25px;
+    /* Reduced image size for better mobile display */
     height: auto;
     margin-right: 10px;
 }

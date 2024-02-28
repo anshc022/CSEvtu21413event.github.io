@@ -28,12 +28,16 @@ ul {
 #event-title {
     text-align: center;
     margin-top: 20px;
+    font-size: 24px;
+    /* Adjust font size for smaller screens */
 }
 
 #event-date {
     text-align: center;
     margin-top: 10px;
     font-style: italic;
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
 }
 
 .button-area {
@@ -68,7 +72,8 @@ ul {
 
 #join-whatsapp-group span {
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
 }
 
 #event-about,
@@ -81,15 +86,21 @@ ul {
 #event-info h2,
 #event-rules h2 {
     color: #007bff;
+    font-size: 20px;
+    /* Adjust font size for smaller screens */
 }
 
 #event-about p,
 #event-info ul,
 #event-rules ul {
     margin-top: 10px;
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
 }
 
 #event-info ul,
 #event-rules ul {
     list-style-type: disc;
+    padding-left: 20px;
+    /* Add padding to list items for better readability */
 }
