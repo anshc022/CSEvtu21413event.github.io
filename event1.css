@@ -1,0 +1,95 @@
+/* CSS for event details */
+
+
+/* Resetting default margin and padding */
+
+body,
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#event-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#event-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#event-date {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.button-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#register-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#register-button:hover {
+    background-color: #0056b3;
+}
+
+#join-whatsapp-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#join-whatsapp-group img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#join-whatsapp-group span {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#event-about,
+#event-info,
+#event-rules {
+    margin-top: 40px;
+}
+
+#event-about h2,
+#event-info h2,
+#event-rules h2 {
+    color: #007bff;
+}
+
+#event-about p,
+#event-info ul,
+#event-rules ul {
+    margin-top: 10px;
+}
+
+#event-info ul,
+#event-rules ul {
+    list-style-type: disc;
+}

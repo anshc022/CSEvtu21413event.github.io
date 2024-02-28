@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="registration-form" action="https://formspree.io/f/mleqnpae" method="POST">
+        <label for="team_name">Team Name:</label>
+        <input type="text" id="team_name" name="team_name" required>
+        <label for="email">College Email ID:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="member1_name">Member 1 Name:</label>
+        <input type="text" id="member1_name" name="member1_name" required>
+        <label for="vtu_no">VTU No:</label>
+        <input type="text" id="vtu_no" name="vtu_no" required>
+        <label for="year1">Year:</label>
+        <select id="year1" name="year1" required>
+            <option value="">Select Year</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+        </select>
+        <label for="contact_number1">Contact Number (WhatsApp):</label>
+        <input type="text" id="contact_number1" name="contact_number1" required>
+
+        <label for="member2_name">Member 2 Name:</label>
+        <input type="text" id="member2_name" name="member2_name" required>
+        <label for="vtu_no2">VTU No:</label>
+        <input type="text" id="vtu_no2" name="vtu_no2" required>
+        <label for="year2">Year:</label>
+        <select id="year2" name="year2" required>
+            <option value="">Select Year</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+        </select>
+        <label for="contact_number2">Contact Number (WhatsApp):</label>
+        <input type="text" id="contact_number2" name="contact_number2" required>
+
+        <label for="member3_name">Member 3 Name:</label>
+        <input type="text" id="member3_name" name="member3_name" required>
+        <label for="vtu_no3">VTU No:</label>
+        <input type="text" id="vtu_no3" name="vtu_no3" required>
+        <label for="year3">Year:</label>
+        <select id="year3" name="year3" required>
+            <option value="">Select Year</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+        </select>
+        <label for="contact_number3">Contact Number (WhatsApp):</label>
+        <input type="text" id="contact_number3" name="contact_number3" required>
+
+        <button type="submit" id="submit-btn">Send</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('registration-form');
+        const submitButton = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(event) {
+                    const emailInput = document.getElementById('email');
+                    const emailValue = emailInput.value.trim();
+
+                    if (!validateEmail(emailValue)) {
+                        event.preventDefault(); // Prevent form submission
+                        showError(emailInput, 'Please enter a valid email address.');
+                    }
