@@ -26,14 +26,11 @@
     <section id="home">
         <div class="container">
             <!-- Removed duplicate span element -->
+            <!-- Element to contain animated typing -->
+            <span id="element"></span>
         </div>
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <!-- Element to contain animated typing -->
-        <span id="element"></span>
-
         <!-- Load library from the CDN -->
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
         <!-- Setup and start animation! -->
         <script>
             var typed = new Typed('#element', {
@@ -80,7 +77,6 @@
                     <h3>Solution Sprint-24</h3>
                     <p class="date">Mar 19th, 2024</p>
                     <p>Put your skills to Get ready to discover your inner entrepreneur</p>
-                    <button class="register-btn" onclick="window.location.href='ev2.html'" data-event-id="1">Registration</button>
                     <button class="register-btn" onclick="showRegistrationMessage()" data-event-id="1">Registration</button>
                     <script>
                         function showRegistrationMessage() {

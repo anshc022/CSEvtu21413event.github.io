@@ -1,3 +1,4 @@
+// Script to handle registration button click events
 const registerButtons = document.querySelectorAll('.register-btn');
 
 registerButtons.forEach(button => {
@@ -24,9 +25,9 @@ registerButtons.forEach(button => {
         //     button.textContent = 'Register Now'; 
         //     button.removeChild(loader);
     });
-    // ... (rest of your button code) 
 });
-// script.js
+
+// Script to handle event date display and registration button
 const eventDateElement = document.getElementById('event-date');
 const today = new Date();
 const eventDate = new Date('February 29, 2024'); // Update with the actual event date
@@ -38,7 +39,8 @@ if (eventDate < today) {
     // Optionally disable the registration button:
     document.getElementById('register-button').disabled = true;
 }
-// script.js 
+
+// Script to handle smooth scrolling to sections
 const sectionLinks = document.querySelectorAll('#event-about, #event-info, #event-rules');
 
 sectionLinks.forEach(link => {
@@ -54,7 +56,8 @@ sectionLinks.forEach(link => {
         });
     });
 });
-// script.js
+
+// Script to handle countdown timer
 const countdownElement = document.createElement('div'); // Create a new element for the timer
 countdownElement.id = 'countdown';
 document.querySelector('.container').appendChild(countdownElement); // Insert to the page
@@ -81,5 +84,3 @@ function updateCountdown() {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call
-
-// ... (eventCards code)
