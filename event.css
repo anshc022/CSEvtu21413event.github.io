@@ -58,7 +58,7 @@ p {
 
 #register-button,
 #join-whatsapp-group button {
-    background-color: #007bff;
+    background-color: #941b1b;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -70,7 +70,7 @@ p {
 
 #register-button:hover,
 #join-whatsapp-group button:hover {
-    background-color: #0056b3;
+    background-color: #696c6e;
 }
 
 #join-whatsapp-group {
