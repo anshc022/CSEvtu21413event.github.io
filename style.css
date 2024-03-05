@@ -65,99 +65,10 @@ nav ul li a:hover {
     /* Change to your preferred hover color */
 }
 
-#events-section {
-    display: flex;
-    padding: 20px;
-}
-
-.container {
-    margin: 0 auto;
-}
-
-.evnt {
-    margin-left: 550px;
-    color: red;
-    text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 .events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-}
-
-.event-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event-card img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.date {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.register-btn {
-    background-color: #7fc769;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.register-btn:hover {
-    background-color: #0056b3;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Scrollable container */
-
-#scrollable-container {
-    height: 300px;
-    overflow-y: auto;
-}
-
-
-/* Footer */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-#event-results {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-    text-align: center;
-}
-
-#event-results h2 {
-    color: #333;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-#event-results p {
-    color: #666;
-    font-size: 18px;
 }
 
 .event-card {
@@ -206,4 +117,25 @@ footer p {
 .register-btn:hover {
     background-color: #0056b3;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Media query for phones */
+
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+    header {
+        padding: 10px;
+    }
+    .logo img {
+        height: 40px;
+    }
+    nav ul li {
+        margin-right: 10px;
+    }
+    .event-card {
+        margin: 10px 0;
+    }
 }
