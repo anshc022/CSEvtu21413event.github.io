@@ -46,13 +46,27 @@
 @media (max-width: 768px) {
     .slider {
         width: 95%;
-        /* Adjust for smaller screens */
+        height: 250px;
+        /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .slider {
-        height: 200px;
+        height: 150px;
         /* Adjust height for very small screens */
+    }
+    .prev,
+    .next {
+        font-size: 12px;
+        /* Adjust font size for navigation buttons */
+    }
+    .prev {
+        left: 5px;
+        /* Adjust left position for previous button */
+    }
+    .next {
+        right: 5px;
+        /* Adjust right position for next button */
     }
 }
