@@ -13,6 +13,55 @@
             padding: 20px;
         }
         
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #d6e4f1c8;
+            /* Change to your preferred background color */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            height: 50px;
+            /* Adjust to your logo size */
+            width: auto;
+        }
+        
+        nav {
+            font-size: 23px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        
+        nav ul li a {
+            color: #333;
+            /* Change to your preferred text color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #007bff;
+            /* Change to your preferred hover color */
+        }
+        
         form {
             max-width: 600px;
             margin: auto;
@@ -76,7 +125,18 @@
 </head>
 
 <body>
-
+    <header>
+        <div class="logo">
+            <img src="/Logo-337x109.png" alt="Your Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">Event</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
     <form id="registration-form" action="https://formspree.io/f/mleqnpae" method="POST">
         <label for="team_name">Team Name:</label>
         <input type="text" id="team_name" name="team_name" required>

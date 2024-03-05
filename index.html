@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE Department Events</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/design.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
+
     <header>
         <div class="logo">
-            <img src="Logo-337x109.png" alt="Your Logo">
+            <img src="/Logo-337x109.png" alt="Your Logo">
         </div>
         <nav>
             <ul>
-                <li>
-                    <a href="#home">CSE Department</a>
-                </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Event</a></li>
+                <li><a href="#help">Help</a></li>
             </ul>
         </nav>
     </header>
@@ -33,88 +40,129 @@
         <!-- Setup and start animation! -->
         <script>
             var typed = new Typed('#element', {
-                strings: ['<span style="font-size: 36px;"><i>CSE</i> DEPARTMENT.</span>'],
+                strings: ['<span style="font-size: 36px; color:#880808; "><i>CSE</i> DEPARTMENT.</span>'],
                 typeSpeed: 80,
                 loop: true
             });
         </script>
+
+
     </section>
+    <div class="container">
+        <h2 class="evnt">EVENTS</h2>
+    </div>
 
     <section id="events-section">
-        <div class="container">
-            <h2>Upcoming Events</h2>
 
+        <!-- 1st card -->
+        <div class="event-card">
+            <img src="Solution.gif" alt="StartUp Pitching">
+            <h3>Solution Sprint-24</h3>
+            <p class="date">Mar 13th, 2024</p>
+            <p>Take advantage of this chance to showcase your skills and network with peers in the engineering community</p>
+            <button class="register-btn" onclick="window.location.href='ev2.html'" data-event-id="1">Registration</button>
+            <script>
+                function showRegistrationMessage() {
+                    var registrationStartDate = new Date(
+                        "2024-03-11T17:00:00"); // Registration start date and time: Mar 14th, 2024 at 5:00 PM
+                    var today = new Date();
 
-            <div class="events-grid">
-
-                <div class="event-card">
-                    <img src="Untitled design (1).gif" alt="StartUp Pitching">
-                    <h3>StartUp Pitching</h3>
-                    <p class="date">Feb 29th, 2024</p>
-                    <p>Put your skills to Get ready to discover your inner entrepreneur</p>
-                    <button class="register-btn" onclick="checkEventStatus()">Closed</button>
-                </div>
-
-                <script>
-                    function checkEventStatus() {
-                        var today = new Date();
-                        var eventStartDate = new Date("2024-02-29T13:45:00"); // Event start time: Feb 29th, 2024 at 1:45 PM
-                        var eventEndDate = new Date("2024-02-29T16:45:00"); // Event end time: Feb 29th, 2024 at 4:45 PM
-
-                        if (today < eventStartDate) {
-                            alert("Event has not started yet. It will start at 1:45 PM.");
-                        } else if (today > eventEndDate) {
-                            alert("Event has ended. Results have been declared.");
-                        } else {
-                            alert("Event is ongoing!");
-                        }
+                    if (today < registrationStartDate) {
+                        // If today's date is before the registration start date
+                        var formattedDate = registrationStartDate.toLocaleString('en-US', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric',
+                            hour: 'numeric',
+                            minute: 'numeric',
+                            hour12: true
+                        });
+                        alert("Registration has not started yet. It will start on " + formattedDate + ".");
+                    } else {
+                        // If today's date is on or after the registration start date
+                        alert("Registration is ongoing.");
                     }
-                </script>
+                }
+            </script>
+        </div>
 
+        <!-- 2nd card -->
+        <div class="event-card">
+            <img src="Solution (3).gif" alt="StartUp Pitching">
+            <h3>Solution Sprint-24</h3>
+            <p class="date">Mar 1th, 2024</p>
+            <p>Put your skills to Get ready to discover</p>
+            <button class="register-btn" onclick="showRegistrationMessage()" data-event-id="1">Open Soon</button>
+            <script>
+                function showRegistrationMessage() {
+                    var registrationStartDate = new Date(
+                        "2024-03-11T17:00:00"); // Registration start date and time: Mar 14th, 2024 at 5:00 PM
+                    var today = new Date();
 
-                <div class="event-card">
-                    <img src="Solution.gif" alt="StartUp Pitching">
-                    <h3>Solution Sprint-24</h3>
-                    <p class="date">Mar 19th, 2024</p>
-                    <p>Put your skills to Get ready to discover your inner entrepreneur</p>
-                    <button class="register-btn" onclick="showRegistrationMessage()" data-event-id="1">Open Soon</button>
-                    <script>
-                        function showRegistrationMessage() {
-                            var registrationStartDate = new Date("2024-03-14T17:00:00"); // Registration start date and time: Mar 14th, 2024 at 5:00 PM
-                            var today = new Date();
+                    if (today < registrationStartDate) {
+                        // If today's date is before the registration start date
+                        var formattedDate = registrationStartDate.toLocaleString('en-US', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric',
+                            hour: 'numeric',
+                            minute: 'numeric',
+                            hour12: true
+                        });
+                        alert("Registration has not started yet. It will start on " + formattedDate + ".");
+                    } else {
+                        // If today's date is on or after the registration start date
+                        alert("Registration is ongoing.");
+                    }
+                }
+            </script>
+        </div>
 
-                            if (today < registrationStartDate) {
-                                // If today's date is before the registration start date
-                                var formattedDate = registrationStartDate.toLocaleString('en-US', {
-                                    month: 'long',
-                                    day: 'numeric',
-                                    year: 'numeric',
-                                    hour: 'numeric',
-                                    minute: 'numeric',
-                                    hour12: true
-                                });
-                                alert("Registration has not started yet. It will start on " + formattedDate + ".");
-                            } else {
-                                // If today's date is on or after the registration start date
-                                alert("Registration is ongoing.");
-                            }
-                        }
-                    </script>
-                </div>
-                <div class="event-card">
-                </div>
-                <!-- Add more event cards as needed -->
+        <!-- 3rd card -->
+        <div class="events-grid">
+
+            <div class="event-card">
+                <img src="Untitled design (1).gif" alt="StartUp Pitching">
+                <h3>StartUp Pitching</h3>
+                <p class="date">Feb 29th, 2024</p>
+                <p>Put your skills to Get ready to discover your inner entrepreneur</p>
+                <button class="register-btn" onclick="checkEventStatus()">Closed</button>
+
             </div>
-            <section id="event-results">
-                <div class="container">
-                    <h2>Event Results</h2>
-                    <p>The results for the event will be displayed here.</p>
-                </div>
-            </section>
+
+            <script>
+                function checkEventStatus() {
+                    var today = new Date();
+                    var eventStartDate = new Date(
+                        "2024-02-29T13:45:00"); // Event start time: Feb 29th, 2024 at 1:45 PM
+                    var eventEndDate = new Date("2024-02-29T16:45:00"); // Event end time: Feb 29th, 2024 at 4:45 PM
+
+                    if (today < eventStartDate) {
+                        alert("Event has not started yet. It will start at 1:45 PM.");
+                    } else if (today > eventEndDate) {
+                        alert("Event has ended. Results have been declared.");
+                    } else {
+                        alert("Event is ongoing!");
+                    }
+                }
+            </script>
+        </div>
 
         </div>
     </section>
-
+    <section id="event-results">
+        <div class="container">
+            <h2>Event Results</h2>
+            <div class="slider">
+                <div class="slides">
+                    <img src="/party (1).png" alt="Slide 1">
+                    <img src="/party (2).png" alt="Slide 2">
+                    <img src="/party (3).png" alt="Slide 3">
+                </div>
+            </div>
+            <script src="/logic.js"></script>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <p>&copy; Pranshu Chourasia VTU21413. All rights reserved.</p>

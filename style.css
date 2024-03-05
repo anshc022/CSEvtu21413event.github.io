@@ -17,31 +17,24 @@ body {
     font-size: 16px;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 header {
-    position: relative;
-    padding: 40px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: hsla(0, 0%, 100%, 0.5);
-    backdrop-filter: blur(100px);
-    font-size: 24px;
-}
-
-.logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #d6e4f1c8;
+    /* Change to your preferred background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
-    height: 70px;
+    height: 50px;
+    /* Adjust to your logo size */
     width: auto;
+}
+
+nav {
+    font-size: 23px;
 }
 
 nav ul {
@@ -60,18 +53,32 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #333;
+    /* Change to your preferred text color */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #007bff;
+    /* Change to your preferred hover color */
 }
 
-header h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 48px;
+#events-section {
+    display: flex;
+    padding: 20px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.evnt {
+    margin-left: 550px;
+    color: red;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .events-grid {
@@ -83,7 +90,7 @@ header h1 {
 .event-card {
     border: 1px solid #ccc;
     padding: 20px;
-    border-radius: 5px;
+    margin: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -151,4 +158,52 @@ footer p {
 #event-results p {
     color: #666;
     font-size: 18px;
+}
+
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.event-details {
+    padding: 20px;
+}
+
+.event-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.register-btn {
+    background-color: #7fc769;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
