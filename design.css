@@ -4,7 +4,7 @@
     position: relative;
     height: 300px;
     /* Adjust height as needed */
-    margin-left: 450px;
+    margin: auto;
 }
 
 .slides {
