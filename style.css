@@ -67,6 +67,7 @@ nav ul li a:hover {
 
 #events-section {
     display: flex;
+    flex-direction: column;
     padding: 20px;
 }
 
